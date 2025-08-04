@@ -1,0 +1,13 @@
+{
+    "workbench.sideBar.location": "right",
+    "editor.fontFamily": "'Caskaydia Cove Nerd Font'",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "keyboard.dispatch": "keyCode",
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-k>": false
+    },
+    "window.menuBarVisibility": "compact",
+}

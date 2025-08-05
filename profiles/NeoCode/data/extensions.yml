@@ -1,23 +1,27 @@
-disabled:
-  - id: GraphQL.vscode-graphql-syntax
-    uuid: 00000000-0000-0000-0000-000000000000
+disabled: []
 enabled:
-  - id: BeardedBear.beardedicons
-    uuid: 1b7bdcac-09ba-421c-bdde-081928177de7
   - id: bradlc.vscode-tailwindcss
     uuid: 4db62a7c-7d70-419c-96d2-6c3a4dc77ea5
   - id: dsznajder.es7-react-js-snippets
     uuid: 19804510-b475-4dae-b0f7-6ca08fd1af0c
   - id: esbenp.prettier-vscode
     uuid: 96fa4707-6983-4489-b7c5-d5ffdfdcce90
+  - id: formulahendry.auto-close-tag
+    uuid: d3836729-9cc1-42c1-b2af-d50071f57d29
+  - id: formulahendry.auto-rename-tag
+    uuid: 6e440e71-8ed9-4f25-bb78-4b13096b8a03
   - id: GitHub.codespaces
     uuid: 4023d3e5-c840-4cdd-8b54-51c77548aa3f
   - id: GitHub.copilot
     uuid: 23c4aeee-f844-43cd-b53e-1113e483f1a6
   - id: GitHub.copilot-chat
     uuid: 7ec7d6e6-b89e-4cc5-a59b-d6c4d238246f
-  - id: lakshits11.monokai-pirokai
-    uuid: 698fd5c6-f92c-4473-8ca7-a05955b2c80b
+  - id: GraphQL.vscode-graphql-syntax
+    uuid: e1ab76b1-9acd-4ffa-baf7-1d9eaf7cf3d2
+  - id: JonathanHarty.gruvbox-material-icon-theme
+    uuid: 8b7b553c-f741-437c-adf5-cc494eb7d4d8
+  - id: Koujir.gruvchad
+    uuid: 402581fb-e39b-4085-b1c0-ac1173c3481b
   - id: masira1327.nvim-tree
     uuid: 58752c22-0938-49d0-bf0b-22ec371deafd
   - id: ms-vscode-remote.remote-ssh
@@ -26,6 +30,10 @@ enabled:
     uuid: bfeaf631-bcff-4908-93ed-fda4ef9a0c5c
   - id: ms-vscode.remote-explorer
     uuid: 11858313-52cc-4e57-b3e4-d7b65281e34b
+  - id: tintinweb.vscode-inline-bookmarks
+    uuid: 160aa39f-c929-462e-a537-812f5d3ea2d0
+  - id: tobias-z.vscode-harpoon
+    uuid: 451b37de-abca-46dc-a5c0-f6a0664eb089
   - id: vscodevim.vim
     uuid: d96e79c6-8b25-4be3-8545-0e0ecefcae03
   - id: WakaTime.vscode-wakatime

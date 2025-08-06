@@ -5,9 +5,6 @@
         "asvetliakov.vscode-neovim": 1
     },
     "keyboard.dispatch": "keyCode",
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-k>": false
-    },
     "window.menuBarVisibility": "compact",
+    "syncSettings.resources": ["extensions", "keybindings", "settings", "snippets", "uiState"]
 }

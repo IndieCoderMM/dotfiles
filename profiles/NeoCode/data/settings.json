@@ -1,10 +1,13 @@
 {
     "workbench.sideBar.location": "right",
-    "editor.fontFamily": "'Caskaydia Cove Nerd Font'",
+    "editor.fontFamily": "'JetBrains Mono'",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
     "keyboard.dispatch": "keyCode",
     "window.menuBarVisibility": "compact",
-    "syncSettings.resources": ["extensions", "keybindings", "settings", "snippets", "uiState"]
+    "syncSettings.resources": [
+        "extensions", "keybindings", "settings", "snippets", "uiState"
+    ],
+    "window.newWindowProfile": "NeoCode"
 }

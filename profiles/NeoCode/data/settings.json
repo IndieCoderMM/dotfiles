@@ -9,5 +9,6 @@
     "syncSettings.resources": [
         "extensions", "keybindings", "settings", "snippets", "uiState"
     ],
-    "window.newWindowProfile": "NeoCode"
+    "window.newWindowProfile": "NeoCode",
+    "syncSettings.keybindingsPerPlatform": false
 }

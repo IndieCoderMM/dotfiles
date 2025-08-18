@@ -1,3 +1,6 @@
+# Grep alias
+alias alg="alias | grep -i"
+
 alias n="nvim"
 alias zrc="nvim ~/.zshrc"
 alias srz="source ~/.zshrc"
@@ -78,3 +81,12 @@ alias nre!="npmclr! && npmi"
 # Search in the npm database
 alias npmF="npm search"
 
+# PNPM aliases
+alias pnpi='pnpm install'
+alias pnpb='pnpm run build'
+alias pnpr='pnpm run'
+alias pnpd='pnpm dev'
+alias pndm='pnpm dev --mode'
+alias pfmt='pnpm format'
+alias pnpt='pnpm test'
+alias pclr='rm -rf node_modules dist && pnpm install'

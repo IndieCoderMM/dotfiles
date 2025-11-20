@@ -28,19 +28,19 @@ return {
           pos = 'float',
           id = 'fterm',
         }
-      end, { desc = 'Toggle [F]loat terminal' })
-      vim.keymap.set({ 'n', 't' }, '<leader>`s', function()
+      end, { desc = '[F]loat terminal toggle' })
+      vim.keymap.set({ 'n', 't' }, '<C-`>', function()
         require('nvchad.term').toggle {
           pos = 'sp',
           id = 'hterm',
         }
-      end, { desc = 'Toggle [S]plit terminal' })
+      end, { desc = '[`] Terminal toggle' })
       vim.keymap.set({ 'n', 't' }, '<leader>`v', function()
         require('nvchad.term').toggle {
           pos = 'vsp',
           id = 'vterm',
         }
-      end, { desc = 'Toggle [S]plit terminal' })
+      end, { desc = '[V]split terminal toggle' })
     end,
   },
   'nvchad/volt',

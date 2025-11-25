@@ -7,6 +7,8 @@ vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
 vim.opt.termguicolors = true
+vim.o.winborder = 'rounded'
+
 -- [[ Setting options ]]
 --  For more options, you can see `:help option-list`
 vim.opt.number = true
@@ -77,10 +79,19 @@ vim.opt.wildignore:append { '*/node_modules/*' }
 vim.diagnostic.config {
   signs = {
     text = {
-      [vim.diagnostic.severity.ERROR] = '󰅙',
-      [vim.diagnostic.severity.WARN] = '󰀦',
-      [vim.diagnostic.severity.INFO] = '󰋽',
-      [vim.diagnostic.severity.HINT] = '󱕝',
+      [vim.diagnostic.severity.ERROR] = '󰯉',
+      [vim.diagnostic.severity.WARN] = '󱚝',
+      [vim.diagnostic.severity.INFO] = '󰯂',
+      [vim.diagnostic.severity.HINT] = '󱜙',
     },
+  },
+  float = {
+    header = '',
+    border = 'rounded',
+    format = function(diagnostic)
+      local icon = vim.diagnostic.severity[diagnostic.severity]
+      local message = diagnostic.message
+      return string.format('%s %s', icon, message)
+    end,
   },
 }

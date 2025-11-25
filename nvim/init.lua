@@ -44,7 +44,7 @@ require('lazy').setup {
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-        { '<leader>g', group = 'Lazy[G]it', icon = { icon = '󰊢', color = 'red' } },
+        { '<leader>g', group = '[G]it', icon = { icon = '󰊢', color = 'red' } },
         { '<leader>`', group = 'Terminal', icon = { icon = '', color = 'orange' } },
         { ';a', icon = { icon = '󰛢', color = 'azure' } },
       }
@@ -57,8 +57,12 @@ require('lazy').setup {
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
-  { import = 'custom.plugins' },
-  -- require 'custom.plugins',
+  { import = 'plugins.core' },
+  { import = 'plugins.editor' },
+  { import = 'plugins.ui' },
+  { import = 'plugins.addons' },
+
+  -- { import 'custom.plugins' },
 }
 
 for _, v in ipairs(vim.fn.readdir(vim.g.base46_cache)) do

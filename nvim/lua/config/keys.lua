@@ -1,35 +1,31 @@
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
+local map = vim.keymap.set
+
+-- Increment/decrement
+map('n', '+', '<C-a>', { desc = 'Increment number' })
+map('n', '-', '<C-x>', { desc = 'Decrement number' })
+
+-- Splits
+map('n', 'ss', ':split<CR>', { desc = 'Split [S]creen' })
+map('n', 'sv', ':vsplit<CR>', { desc = 'Split [V]ertical' })
+
+--  Window navigation
+map('n', '<C-h>', '<C-w><C-h>', { desc = 'Focus left window' })
+map('n', '<C-l>', '<C-w><C-l>', { desc = 'Focus right window' })
+map('n', '<C-j>', '<C-w><C-j>', { desc = 'Focus lower window' })
+map('n', '<C-k>', '<C-w><C-k>', { desc = 'Focus upper window' })
+
+-- Utils
+map('n', '<C-y>', 'ggVG', { desc = 'Select all' })
+
+map('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+map('n', '<leader>k', vim.diagnostic.open_float, { desc = 'Open diagnostic [E]rror list' })
+
+-- Terminal
+map('n', '<leader>``', '<cmd>tabnew +term<CR>', { desc = '[N]ew tab terminal' })
+map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
---  See `:help hlsearch`
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-
--- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
--- is not what someone will guess without a bit more experience.
---
--- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
--- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('n', '<leader>tt', '<cmd>tabnew +term<CR>', { desc = '[N]ew tab terminal' })
-
--- Select all
-vim.keymap.set('n', '<C-y>', 'ggVG', { desc = 'Select all' })
-
---  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
--- Theme toggle
-
--- [[ Basic Autocommands ]]
---  See `:help lua-guide-autocommands`
+map('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode

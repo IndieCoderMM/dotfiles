@@ -155,14 +155,17 @@ local M = {
           { name = 'emoji' },
         },
         -- Add icons to the completion menu.
-        ---@diagnostic disable: missing-fields
         formatting = {
           format = function(_, vim_item)
             vim_item.kind = (symbol_kinds[vim_item.kind] or '') .. '  ' .. vim_item.kind
             return vim_item
           end,
         },
-        ---@diagnostic enable: missing-fields
+        window = {
+          -- Use bordered windows for completion and documentation
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
+        },
       }
 
       -- options = vim.tbl_deep_extend('force', options, require 'nvchad.cmp')

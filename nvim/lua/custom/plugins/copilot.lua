@@ -1,4 +1,4 @@
-return {
+local M = {
   {
     'zbirenbaum/copilot.lua',
     cmd = 'Copilot',
@@ -70,3 +70,5 @@ return {
   --   end,
   -- },
 }
+
+return {}

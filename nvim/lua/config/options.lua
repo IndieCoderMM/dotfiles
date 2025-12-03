@@ -19,6 +19,7 @@ vim.opt.mouse = 'a'
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
+vim.opt_local.laststatus = 3
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -89,9 +90,19 @@ vim.diagnostic.config {
     header = '',
     border = 'rounded',
     format = function(diagnostic)
-      local icon = vim.diagnostic.severity[diagnostic.severity]
       local message = diagnostic.message
+      local icons = {
+        ERROR = '󰯉',
+        WARN = '󱚝',
+        INFO = '󰯂',
+        HINT = '󱜙',
+      }
+      local iconName = vim.diagnostic.severity[diagnostic.severity]
+      local icon = icons[iconName] or ''
       return string.format('%s %s', icon, message)
     end,
   },
 }
+
+-- highlight visual colors
+-- vim.cmd [[highlight St_VisualMode ctermbg=237 guibg=#3e4452]]

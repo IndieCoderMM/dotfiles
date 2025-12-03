@@ -18,7 +18,9 @@ map('n', '<C-k>', '<C-w><C-k>', { desc = 'Focus upper window' })
 map('n', '<C-y>', 'ggVG', { desc = 'Select all' })
 
 map('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-map('n', '<leader>k', vim.diagnostic.open_float, { desc = 'Open diagnostic [E]rror list' })
+map('n', '<leader>k', vim.diagnostic.open_float, { desc = 'See diagnostic message' })
+map('n', '<leader>j', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
+map('n', '<leader>l', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 
 -- Terminal
 map('n', '<leader>``', '<cmd>tabnew +term<CR>', { desc = '[N]ew tab terminal' })
@@ -37,3 +39,17 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+--
+-- vim.api.nvim_create_autocmd('BufEnter', {
+--   pattern = 'term://*',
+--   callback = function()
+--     vim.opt_local.laststatus = 0
+--   end,
+-- })
+--
+-- vim.api.nvim_create_autocmd('BufLeave', {
+--   pattern = 'term://*',
+--   callback = function()
+--     vim.opt_local.laststatus = 3 -- Or 1
+--   end,
+-- })

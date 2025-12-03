@@ -36,23 +36,23 @@ require('lazy').setup {
       }
       -- Document existing key chains
       require('which-key').add {
-        { '<leader>a', group = '[A]pi', icon = { icon = '', color = 'red' } },
+        -- { '<leader>a', group = '[A]pi', icon = { icon = '', color = 'red' } },
         { '<leader>c', group = '[C]ode', icon = { icon = '󰅱', color = 'green' } },
         { '<leader>d', group = '[D]ocument', icon = { icon = '󰅩', color = 'yellow' } },
-        { '<leader>r', group = '[R]ename' },
-        { '<leader>s', group = '[S]earch' },
+        { '<leader>s', group = '[S]earch', icon = { icon = '', color = 'purple' } },
         { '<leader>w', group = '[W]orkspace' },
-        { '<leader>t', group = '[T]oggle' },
+        { '<leader>t', group = '[T]oggle', icon = { icon = '󰔡', color = 'orange' } },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
         { '<leader>g', group = '[G]it', icon = { icon = '󰊢', color = 'red' } },
         { '<leader>`', group = 'Terminal', icon = { icon = '', color = 'orange' } },
+        { '<leader>o', group = '[O]pencode', icon = { icon = '󰚩', color = 'blue' } },
         { ';a', icon = { icon = '󰛢', color = 'azure' } },
       }
     end,
   },
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-  require 'kickstart.plugins.debug',
+  -- require 'kickstart.plugins.debug',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
@@ -68,5 +68,6 @@ require('lazy').setup {
 for _, v in ipairs(vim.fn.readdir(vim.g.base46_cache)) do
   dofile(vim.g.base46_cache .. v)
 end
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

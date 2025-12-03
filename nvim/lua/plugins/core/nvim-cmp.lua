@@ -48,12 +48,13 @@ local M = {
           -- `friendly-snippets` contains a variety of premade snippets.
           --    See the README about individual language/framework/plugin snippets:
           --    https://github.com/rafamadriz/friendly-snippets
-          {
-            'rafamadriz/friendly-snippets',
-            config = function()
-              require('luasnip.loaders.from_vscode').lazy_load()
-            end,
-          },
+          -- {
+          --   'rafamadriz/friendly-snippets',
+          --   config = function()
+          --     require('luasnip.loaders.from_vscode').lazy_load()
+          --   end,
+          -- },
+          { 'mlaursen/vim-react-snippets', opts = {} },
         },
       },
       'saadparwaiz1/cmp_luasnip',
@@ -147,7 +148,7 @@ local M = {
             -- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
             group_index = 0,
           },
-          { name = 'supermaven' },
+          -- { name = 'supermaven' },
           -- { name = 'copilot' },
           { name = 'nvim_lsp' },
           { name = 'luasnip' },

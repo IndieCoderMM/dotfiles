@@ -27,6 +27,7 @@ return {
         require('nvchad.term').toggle {
           pos = 'float',
           id = 'fterm',
+          size = 0.8,
         }
       end, { desc = '[F]loat terminal toggle' })
       vim.keymap.set({ 'n', 't' }, '<C-`>', function()

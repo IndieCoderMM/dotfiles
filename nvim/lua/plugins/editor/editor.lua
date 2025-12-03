@@ -1,33 +1,34 @@
 return {
-  {
-    'FabijanZulj/blame.nvim',
-    lazy = false,
-    config = function()
-      require('blame').setup {}
-    end,
-    keys = {
-      { '<leader>gb', '<cmd>BlameToggle virtual<cr>', desc = '[G]it [B]lame view' },
-    },
-  },
-  {
-    'kdheepak/lazygit.nvim',
-    cmd = {
-      'LazyGit',
-      'LazyGitConfig',
-      'LazyGitCurrentFile',
-      'LazyGitFilter',
-      'LazyGitFilterCurrentFile',
-    },
-    -- optional for floating window border decoration
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-    },
-    -- setting the keybinding for LazyGit with 'keys' is recommended in
-    -- order to load the plugin when the command is run for the first time
-    keys = {
-      { '<leader>go', '<cmd>LazyGit<cr>', desc = 'Open LazyGit' },
-    },
-  },
+
+  -- {
+  --   'FabijanZulj/blame.nvim',
+  --   lazy = false,
+  --   config = function()
+  --     require('blame').setup {}
+  --   end,
+  --   keys = {
+  --     { '<leader>gb', '<cmd>BlameToggle virtual<cr>', desc = '[G]it [B]lame view' },
+  --   },
+  -- },
+  -- {
+  --   'kdheepak/lazygit.nvim',
+  --   cmd = {
+  --     'LazyGit',
+  --     'LazyGitConfig',
+  --     'LazyGitCurrentFile',
+  --     'LazyGitFilter',
+  --     'LazyGitFilterCurrentFile',
+  --   },
+  --   -- optional for floating window border decoration
+  --   -- dependencies = {
+  --   --   'nvim-lua/plenary.nvim',
+  --   -- },
+  --   -- setting the keybinding for LazyGit with 'keys' is recommended in
+  --   -- order to load the plugin when the command is run for the first time
+  --   keys = {
+  --     { '<leader>go', '<cmd>LazyGit<cr>', desc = 'Open LazyGit' },
+  --   },
+  -- },
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {

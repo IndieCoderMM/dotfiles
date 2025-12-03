@@ -12,7 +12,7 @@ M.ui = {
   statusline = {
     theme = 'default',
     separator_style = 'block',
-    order = { 'M', 'file', 'git', '%=', 'lsp_msg', '%=', 'diagnostics', 'cursor', 'cwd' },
+    order = { 'M', 'file', 'git', '%=', '%=', 'diagnostics', 'cursor', 'cwd' },
     modules = {
       M = function()
         local config = require('nvconfig').ui.statusline

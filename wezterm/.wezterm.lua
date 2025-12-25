@@ -15,16 +15,27 @@ for _, domain in ipairs(wsl_domains) do
 	domain.default_cwd = "~"
 end
 
-config.color_scheme = "Hardcore" -- "Brogrammer"
+config.window_padding = {
+	left = 4,
+	right = 4,
+	top = 0,
+	bottom = 0,
+}
+
+config.color_scheme = "Atelierdune (base16)"
 -- "Kasugano (terminal.sexy)"
+-- config.font =
+-- 	wezterm.font("Caskaydia Cove Nerd Font Mono", { weight = "Regular", stretch = "Normal", style = "Normal" })
 config.font = wezterm.font_with_fallback({
-	{ family = "Caskaydia Cove Nerd Font", scale = 1.2 },
+	-- { family = "Terminess Nerd Font", weight = "Bold", scale = 1.4 },
+	-- { family = "MartianMonoNerdFont", scale = 1.1, weight = "Regular" },
+	{ family = "Caskaydia Mono Nerd Font", scale = 1.2 },
 })
 config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
 config.tab_bar_at_bottom = false
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.92
 
 wezterm.on("update-status", function(window, pane)
 	-- Workspace name

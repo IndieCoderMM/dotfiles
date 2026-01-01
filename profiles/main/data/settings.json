@@ -1,0 +1,17 @@
+{
+    "workbench.sideBar.location": "right",
+    "editor.fontFamily": "'JetBrains Mono'",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "keyboard.dispatch": "keyCode",
+    "window.menuBarVisibility": "compact",
+    "syncSettings.resources": [
+        "extensions", "keybindings", "settings", "snippets", "uiState"
+    ],
+    "window.newWindowProfile": "NeoCode",
+    "syncSettings.keybindingsPerPlatform": false,
+    "github.codespaces.showDisplayNameInRemoteIndicator": false,
+    "extensions.autoCheckUpdates": false,
+    "update.mode": "manual"
+}

@@ -1,0 +1,98 @@
+builtin:
+  disabled:
+    - ms-vscode.js-debug
+    - ms-vscode.js-debug-companion
+    - ms-vscode.vscode-js-profile-table
+    - vscode.configuration-editing
+    - vscode.css-language-features
+    - vscode.debug-auto-launch
+    - vscode.debug-server-ready
+    - vscode.emmet
+    - vscode.extension-editing
+    - vscode.git
+    - vscode.git-base
+    - vscode.github
+    - vscode.grunt
+    - vscode.gulp
+    - vscode.html-language-features
+    - vscode.ipynb
+    - vscode.jake
+    - vscode.json-language-features
+    - vscode.markdown-language-features
+    - vscode.markdown-math
+    - vscode.merge-conflict
+    - vscode.npm
+    - vscode.php-language-features
+    - vscode.references-view
+    - vscode.search-result
+    - vscode.terminal-suggest
+    - vscode.tunnel-forwarding
+    - vscode.typescript-language-features
+disabled:
+  - id: benshabatnoam.google-translate-ext
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: bradlc.vscode-tailwindcss
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: dbaeumer.vscode-eslint
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: eliasmeireles.pretty-git-diff
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: esbenp.prettier-vscode
+    uuid: 96fa4707-6983-4489-b7c5-d5ffdfdcce90
+  - id: GitHub.copilot
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: GitHub.copilot-chat
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: golang.go
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: jock.svg
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: masira1327.nvim-tree
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: ms-python.debugpy
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: ms-python.python
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: ms-python.vscode-pylance
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: ms-python.vscode-python-envs
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: otovo-oss.htmx-tags
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: Prisma.prisma
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: tintinweb.vscode-inline-bookmarks
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: tobias-z.vscode-harpoon
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: WakaTime.vscode-wakatime
+    uuid: 00000000-0000-0000-0000-000000000000
+enabled:
+  - id: aaron-bond.better-comments
+    uuid: 7a0110bb-231a-4598-aa1b-0769ea46d28b
+  - id: dsznajder.es7-react-js-snippets
+    uuid: 19804510-b475-4dae-b0f7-6ca08fd1af0c
+  - id: formulahendry.auto-close-tag
+    uuid: d3836729-9cc1-42c1-b2af-d50071f57d29
+  - id: formulahendry.auto-rename-tag
+    uuid: 6e440e71-8ed9-4f25-bb78-4b13096b8a03
+  - id: GitHub.codespaces
+    uuid: 4023d3e5-c840-4cdd-8b54-51c77548aa3f
+  - id: GraphQL.vscode-graphql-syntax
+    uuid: e1ab76b1-9acd-4ffa-baf7-1d9eaf7cf3d2
+  - id: JonathanHarty.gruvbox-material-icon-theme
+    uuid: 8b7b553c-f741-437c-adf5-cc494eb7d4d8
+  - id: Koujir.gruvchad
+    uuid: 402581fb-e39b-4085-b1c0-ac1173c3481b
+  - id: ms-vscode-remote.remote-ssh
+    uuid: 607fd052-be03-4363-b657-2bd62b83d28a
+  - id: ms-vscode-remote.remote-ssh-edit
+    uuid: bfeaf631-bcff-4908-93ed-fda4ef9a0c5c
+  - id: ms-vscode.remote-explorer
+    uuid: 11858313-52cc-4e57-b3e4-d7b65281e34b
+  - id: vscodevim.vim
+    uuid: d96e79c6-8b25-4be3-8545-0e0ecefcae03
+  - id: Webhooked.kanso-theme
+    uuid: 8878de28-f891-499b-870f-43c9b7194f2a
+  - id: zokugun.cron-tasks
+    uuid: b7bbbbd5-7a39-4312-87aa-ef6a41de67fb

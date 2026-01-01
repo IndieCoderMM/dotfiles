@@ -10,8 +10,10 @@
         "extensions", "keybindings", "settings", "snippets", "uiState"
     ],
     "window.newWindowProfile": "NeoCode",
-    "syncSettings.keybindingsPerPlatform": false,
     "github.codespaces.showDisplayNameInRemoteIndicator": false,
     "extensions.autoCheckUpdates": false,
-    "update.mode": "manual"
+    "update.mode": "manual",
+    "syncSettings.additionalFiles": [
+
+    ]
 }

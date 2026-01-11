@@ -1,10 +1,30 @@
 local wezterm = require("wezterm")
-
+local act = wezterm.action
 local config = wezterm.config_builder()
 
-local wsl_domains = wezterm.default_wsl_domains()
+config.default_cursor_style = "BlinkingBlock"
+config.animation_fps = 1
+config.cursor_blink_rate = 500
+config.term = "xterm-256color" -- Set the terminal type
 
-local act = wezterm.action
+config.font = wezterm.font_with_fallback({
+	{ family = "CaskaydiaMono NFM", weight = "DemiLight" },
+	-- { family = "JetBrainsMono NFM", weight = "Medium" },
+	-- "JetBrains Mono Regular",
+})
+config.cell_width = 0.9
+
+config.window_background_opacity = 0.9
+config.font_size = 16.0
+
+config.window_padding = {
+	left = 4,
+	right = 4,
+	top = 0,
+	bottom = 0,
+}
+
+local wsl_domains = wezterm.default_wsl_domains()
 
 wezterm.on("gui-startup", function(cmd)
 	local _, _, window = wezterm.mux.spawn_window(cmd or {})
@@ -15,27 +35,7 @@ for _, domain in ipairs(wsl_domains) do
 	domain.default_cwd = "~"
 end
 
-config.window_padding = {
-	left = 4,
-	right = 4,
-	top = 0,
-	bottom = 0,
-}
-
-config.color_scheme = "Atelierdune (base16)"
--- "Kasugano (terminal.sexy)"
--- config.font =
--- 	wezterm.font("Caskaydia Cove Nerd Font Mono", { weight = "Regular", stretch = "Normal", style = "Normal" })
-config.font = wezterm.font_with_fallback({
-	-- { family = "Terminess Nerd Font", weight = "Bold", scale = 1.4 },
-	-- { family = "MartianMonoNerdFont", scale = 1.1, weight = "Regular" },
-	{ family = "Caskaydia Mono Nerd Font", scale = 1.2 },
-})
-config.use_fancy_tab_bar = false
-config.status_update_interval = 1000
-config.tab_bar_at_bottom = false
-config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.92
+config.wsl_domains = wsl_domains
 
 wezterm.on("update-status", function(window, pane)
 	-- Workspace name
@@ -108,6 +108,34 @@ wezterm.on("update-status", function(window, pane)
 	}))
 end)
 
+-- tabs
+config.hide_tab_bar_if_only_one_tab = true
+config.use_fancy_tab_bar = false
+config.tab_bar_at_bottom = false
+config.status_update_interval = 1000
+config.initial_cols = 80
+config.default_domain = "WSL:Ubuntu-24.04"
+
+-- config.inactive_pane_hsb = {
+-- 	saturation = 0.0,
+-- 	brightness = 1.0,
+-- }
+
+-- This is where you actually apply your config choices
+--
+
+-- color scheme toggling
+-- wezterm.on("toggle-colorscheme", function(window, pane)
+-- 	local overrides = window:get_config_overrides() or {}
+-- 	if overrides.color_scheme == "Zenburn" then
+-- 		overrides.color_scheme = "Cloud (terminal.sexy)"
+-- 	else
+-- 		overrides.color_scheme = "Zenburn"
+-- 	end
+-- 	window:set_config_overrides(overrides)
+-- end)
+
+-- keymaps
 -- Keys
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
@@ -174,24 +202,58 @@ for i = 1, 9 do
 	})
 end
 
-config.key_tables = {
-	resize_pane = {
-		{ key = "h", action = act.AdjustPaneSize({ "Left", 1 }) },
-		{ key = "j", action = act.AdjustPaneSize({ "Down", 1 }) },
-		{ key = "k", action = act.AdjustPaneSize({ "Up", 1 }) },
-		{ key = "l", action = act.AdjustPaneSize({ "Right", 1 }) },
-		{ key = "Escape", action = "PopKeyTable" },
-		{ key = "Enter", action = "PopKeyTable" },
-	},
-	move_tab = {
-		{ key = "h", action = act.MoveTabRelative(-1) },
-		{ key = "j", action = act.MoveTabRelative(-1) },
-		{ key = "k", action = act.MoveTabRelative(1) },
-		{ key = "l", action = act.MoveTabRelative(1) },
-		{ key = "Escape", action = "PopKeyTable" },
-		{ key = "Enter", action = "PopKeyTable" },
+-- For example, changing the color scheme:
+config.color_scheme = "Cloud (terminal.sexy)"
+config.colors = {
+	-- background = '#3b224c',
+	-- background = "#181616", -- vague.nvim bg
+	-- background = "#080808", -- almost black
+	background = "#0c0b0f", -- dark purple
+	-- background = "#020202", -- dark purple
+	-- background = "#17151c", -- brighter purple
+	-- background = "#16141a",
+	-- background = "#0e0e12", -- bright washed lavendar
+	-- background = 'rgba(59, 34, 76, 100%)',
+	cursor_border = "#bea3c7",
+	-- cursor_fg = "#281733",
+	cursor_bg = "#bea3c7",
+	-- selection_fg = '#281733',
+
+	tab_bar = {
+		background = "#0c0b0f",
+		-- background = "rgba(0, 0, 0, 0%)",
+		active_tab = {
+			bg_color = "#0c0b0f",
+			fg_color = "#bea3c7",
+			intensity = "Normal",
+			underline = "None",
+			italic = false,
+			strikethrough = false,
+		},
+		inactive_tab = {
+			bg_color = "#0c0b0f",
+			fg_color = "#f8f2f5",
+			intensity = "Normal",
+			underline = "None",
+			italic = false,
+			strikethrough = false,
+		},
+
+		new_tab = {
+			-- bg_color = "rgba(59, 34, 76, 50%)",
+			bg_color = "#0c0b0f",
+			fg_color = "white",
+		},
 	},
 }
 
--- and finally, return the configuration to wezterm
+-- config.window_frame = {
+-- 	font = wezterm.font({ family = "Iosevka Custom", weight = "Regular" }),
+-- 	active_titlebar_bg = "#0c0b0f",
+-- 	-- active_titlebar_bg = "#181616",
+-- }
+
+-- config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
+-- config.window_decorations = "NONE | RESIZE"
+
 return config
